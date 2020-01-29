@@ -14,7 +14,7 @@ request('https://vogue.globo.com/moda/gente/noticia/2016/08/segundo-estudo-cient
 
 		})
 		console.log(images);
-		for (var i = 0; i < images.length; i++){
+		for (let i = 0; i < images.length; i++){
 			request(images[i]).pipe(fs.createWriteStream('images/beautiful_girls' + i + '.jpg'));
 		}
 	}
